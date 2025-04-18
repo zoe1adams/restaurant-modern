@@ -1,0 +1,310 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.site-header {
+  background-color: #111;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6b01;
+}
+
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  animation: slide 15s infinite ease-in-out;
+  width: 300%;
+}
+
+.slider img {
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+}
+
+/* Overlay on hero */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.overlay h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn, .btn-outline {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn {
+  background-color: #ff6b01;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #e65c00;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #ff6b01;
+  color: #ff6b01;
+}
+
+.btn-outline:hover {
+  background-color: #ff6b01;
+  color: white;
+}
+
+/* Centered Section */
+.centered-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.centered-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.centered-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  color: #555;
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.highlight-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 30px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.highlight-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+input, select, textarea {
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 0.95rem;
+}
+
+/* Slider animation */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100vw); }
+  66% { transform: translateX(-200vw); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .overlay h2 {
+    font-size: 2rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.delivery-method {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.delivery-method h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.method-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.order-menu {
+  padding: 40px 20px;
+}
+
+.order-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.food-card {
+  background: #fff;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.food-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.food-card h4 {
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+}
+
+.food-card p {
+  color: #ff6b01;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.food-card .btn {
+  margin-bottom: 15px;
+}

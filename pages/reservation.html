@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservations | Your Restaurant</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <h1 class="logo">YourRestaurant</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="reservation.html">Reservation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Reservation Intro -->
+  <section class="centered-section container">
+    <h2>Make a Reservation</h2>
+    <p>Reserve a table quickly and easily. Whether it’s date night or dinner with friends, we’ve got you.</p>
+  </section>
+
+  <!-- Reservation Form -->
+  <section class="reservation-form-section container">
+    <form class="reservation-form">
+      <h3>Reservation Details</h3>
+
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="tel" placeholder="Phone Number" required />
+
+      <select required>
+        <option value="">Party Size</option>
+        <option>1 Person</option>
+        <option>2 People</option>
+        <option>3 People</option>
+        <option>4 People</option>
+        <option>5+ People</option>
+      </select>
+
+      <input type="date" required />
+      <input type="time" required />
+
+      <label>Seating Preference</label>
+      <div class="method-buttons">
+        <button type="button" class="btn selected">Dine-In</button>
+        <button type="button" class="btn-outline">Private Room</button>
+      </div>
+
+      <textarea placeholder="Special Requests (Optional)"></textarea>
+
+      <button type="submit" class="btn">Reserve Table</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>© 2025 Your Restaurant Name. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
